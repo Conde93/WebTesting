@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230303 08:52:03.408" rpa="false" schemaversion="3">
+<suite id="s1" name="Amazon Testes" source="C:\CursoUdemy\RobotFramework\WebTesting\amazon_testes.robot">
+<test id="s1-t1" name="Caso de testes 01 - Acesso ao menu &quot;Mais vendidos&quot;" line="10">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230303 08:52:03.621" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230303 08:52:03.621" endtime="20230303 08:52:04.699"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230303 08:52:04.699" endtime="20230303 08:52:04.824"/>
+</kw>
+<status status="PASS" starttime="20230303 08:52:03.620" endtime="20230303 08:52:04.825"/>
+</kw>
+<kw name=" Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230303 08:52:04.826" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20230303 08:52:04.825" endtime="20230303 08:52:06.575"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${LOGO_AMAZON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230303 08:52:06.575" endtime="20230303 08:52:06.645"/>
+</kw>
+<status status="PASS" starttime="20230303 08:52:04.825" endtime="20230303 08:52:06.645"/>
+</kw>
+<kw name="Entrar no menu &quot;Mais vendidos&quot;" library="amazon_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MAIS_VENDIDOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230303 08:52:06.646" level="INFO">Clicking element '//a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers'][contains(.,'Mais Vendidos')]'.</msg>
+<status status="PASS" starttime="20230303 08:52:06.646" endtime="20230303 08:52:08.370"/>
+</kw>
+<status status="PASS" starttime="20230303 08:52:06.645" endtime="20230303 08:52:08.370"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Mais vendidos&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${FRASE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230303 08:52:08.372" endtime="20230303 08:52:08.411"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_MAIS_VENDIDOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230303 08:52:08.412" endtime="20230303 08:52:08.450"/>
+</kw>
+<status status="PASS" starttime="20230303 08:52:08.371" endtime="20230303 08:52:08.451"/>
+</kw>
+<kw name=" Verificar se o título da página fica &quot;Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon&quot;" library="amazon_resources">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230303 08:52:08.462" level="INFO">Page title is 'Amazon.com.br Mais Vendidos: Os itens mais populares na Amazon'.</msg>
+<status status="PASS" starttime="20230303 08:52:08.452" endtime="20230303 08:52:08.462"/>
+</kw>
+<status status="PASS" starttime="20230303 08:52:08.451" endtime="20230303 08:52:08.463"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;">
+<msg timestamp="20230303 08:52:08.468" level="FAIL">No keyword with name 'Verificar se aparece a categoria "Computadores e Informática"' found. Did you mean:
+    amazon_resources.Verificar Se Aparece A Categoria "Computadores E Informática}"</msg>
+<status status="FAIL" starttime="20230303 08:52:08.468" endtime="20230303 08:52:08.468"/>
+</kw>
+<doc>Esse teste verifica o menu de letronicos do site Amazon.com.br
+e verifica a categoria computadores e Informática</doc>
+<tag>menus</tag>
+<status status="FAIL" starttime="20230303 08:52:03.619" endtime="20230303 08:52:08.469">No keyword with name 'Verificar se aparece a categoria "Computadores e Informática"' found. Did you mean:
+    amazon_resources.Verificar Se Aparece A Categoria "Computadores E Informática}"</status>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="FAIL" starttime="20230303 08:52:03.410" endtime="20230303 08:52:08.471"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
